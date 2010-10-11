@@ -12,13 +12,13 @@
 
 ## "The Concurrent Dream"
 
-![concurrent sheeps](concurrent_sheeps.png)
+![concurrent sheeps](images/concurrent_sheeps.png)
 
 #SLIDE
 
 ## Think "Concurrent" can be tricky...
 
-![headache](headache.jpg)
+![headache](images/headache.jpg)
 <div style="font-size: 0.5em;">(image from <a href="http://www.flickr.com/photos/87913776@N00/871983779/in/photostream/">futureatlas.com)</a></div>
 
 #SLIDE
@@ -27,7 +27,7 @@ And if...
 
 ## SHARED MUTABLE MEMORY IS EVIL...
 
-l![Shared State](shared_state.png)
+l![Shared State](images/shared_state.png)
 
 #SLIDE
 
@@ -35,7 +35,7 @@ Then...
 
 ## THREADING + OOP IS THE HELL
 
-![Thread OOP](thread_oop.png)
+![Thread OOP](images/thread_oop.png)
 
 #SLIDE
 
@@ -50,7 +50,7 @@ Then...
 #  Episode. 0x01
 ## "The Faultless Lie"
 
-![Bug Free](bug_free.png)
+![Bug Free](images/bug_free.png)
 
 #SLIDE
 
@@ -92,7 +92,7 @@ Then...
 #  Episode. 0x02
 ## "My name is ERL"
 
-![my name is erl](my_name_is_erl.png)
+![my name is erl](images/my_name_is_erl.png)
 
 #SLIDE
 
@@ -111,25 +111,25 @@ Eshell V5.7.4  (abort with ^G)
 
 ## single assignment vars
 
-![bad match](bad_match.png)
+![bad match](images/bad_match.png)
 
 #SLIDE
 
 ## pattern matching
 
-![pattern matching](pattern_matching.png)
+![pattern matching](images/pattern_matching.png)
 
 #SLIDE
 
 ## Lightweight processes
 
-![spawn Fun](spawn_fun.png)
+![spawn Fun](images/spawn_fun.png)
 
 #SLIDE
 
 ## Message passing
 
-![send/receive message](send_receive_message.png)
+![send/receive message](images/send_receive_message.png)
 
 #SLIDE
 
