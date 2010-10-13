@@ -4,7 +4,7 @@
  
 ## do geeks dream of concurrent sheeps?
 
-Season 1
+<small>Luca Greco &lt;luca.greco@alcacoop.it&gt;</small>
 
 # LinuxDay2010
 
