@@ -10,13 +10,21 @@
 
 #SLIDE
 
-#  Episode. 0x01
+## Erlang...
 
-## "The Concurrent Dream"
-
-![concurrent sheeps](images/concurrent_sheeps.png)
+* created at ericsson for its telco devices
+* designed for concurrent / fault tolerant software
 
 #SLIDE
+
+## And now...
+
+* ejabberd, couchdb, rabbitmq...
+* github, basho, processone, facebook, google, amazon...
+
+#SLIDE
+
+# Ok... wait... but...
 
 ## Why should I learn erlang?!?!
 
@@ -56,6 +64,24 @@ from an erlang point of view
 
 #SLIDE
 
+# From Erlang...
+## WTF?!??!
+# To Erlang...
+## FTW!!!!
+
+<small>(<a href="http://www.erlang-factory.com/upload/presentations/219/ErlangFactorySFBay2010-JackMoffitt.pdf">
+         from Jack Moffit presentation - ErlangFactorySFBay2010)</a></small>
+
+#SLIDE
+
+#  Episode. 0x01
+
+## "The Concurrent Dream"
+
+![concurrent sheeps](images/concurrent_sheeps.png)
+
+#SLIDE
+
 ## Think "Concurrent" can be tricky...
 
 ![headache](images/headache.jpg)
@@ -79,11 +105,23 @@ Then...
 
 #SLIDE
 
+Ok... admit it!!!
+
+## WE DON'T KNOW
+ 
+## HOW CONCURRENT 
+
+## OUR THREADED OOP APPLICATION
+
+## WILL BE
+
+#SLIDE
+
 ## ...How to survive?
 
+* don't share memory
+* message passing
 * lightweight processes
-* don't share memory 
-* message passing 
 
 #SLIDE
 
@@ -104,28 +142,8 @@ Then...
 
 * fail fast
 * if it fail, do something simpler
-* separate faults recovery from functional code
-
-#SLIDE
-
-# Erlang...
-
-## WTF?!??!
-
-#SLIDE
-
-## Erlang...
-
-* created at ericsson for its telco devices
-* designed for concurrent / fault tolerant software
-
-#SLIDE
-
-## And now...
-
-* ejabberd, couchdb, rabbitmq...
-* github, processone, facebook, google, amazon...
-
+* separate faults recovery from application code
+* isolate faults in its process
 
 #SLIDE
 
