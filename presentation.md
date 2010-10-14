@@ -140,12 +140,53 @@ Then...
 
 Your Erlang best friend: *interactive shell*
 
-<pre><code>
+<pre>
 $ erl -sname rpl
 Erlang R13B03 (erts-5.7.4) [source] [smp:2:2] [rq:2] [async-threads:0]...
 Eshell V5.7.4  (abort with ^G)
 (rpl@sheldon)1&gt;
-</code></pre>
+</pre>
+
+#SLIDE
+
+## Erlang Basic Concepts
+
+#SLIDE
+
+* Code is organized into **modules**
+* Module name have to match filename
+* Modules are compiled into **bytecode** 
+ (*mycode.erl* -> *mycode.beam*)
+* Compiled modules are loaded by
+  an **Erlang VM**
+#SLIDE
+
+## MODULE: helloworld.erl
+
+<pre>
+-module(helloworld).
+-export([run/0]).
+
+run() ->
+  io:format("Hello world!\n").
+</pre>
+
+#SLIDE
+
+## BACK TO ERL: compile and run
+
+<pre>
+$ erl
+Erlang R13B03 (erts-5.7.4) [source] [smp:2:2] [rq:2] [async-threads:0] [hipe] ...
+
+Eshell V5.7.4  (abort with ^G)
+1> c(helloworld).
+{ok,helloworld}
+2> helloworld:run().
+Hello world!
+ok
+3> 
+</pre>
 
 #SLIDE
 
@@ -192,9 +233,7 @@ Pid ! message.
 
 ## receive loop
 
-<pre>
 TODO
-</pre>
 
 #SLIDE
 
