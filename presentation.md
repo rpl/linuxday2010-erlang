@@ -18,6 +18,44 @@
 
 #SLIDE
 
+## Why should I learn erlang?!?!
+
+#SLIDE
+
+## Reason 1.
+
+You can look at this page for a while...
+
+## YOU WANT 
+
+TODO: Immagine/animazione psichedelica
+
+## TO LEARN ERLANG
+
+#SLIDE
+
+## Reason 2.
+
+You are already using some erlang software:
+
+* EJabberd
+* RabbitMQ
+* CouchDB
+* Riak
+* ...
+
+#SLIDE 
+
+## Reason 3.
+
+You are interested to learn
+
+## how to handle concurrency
+
+from an erlang point of view
+
+#SLIDE
+
 ## Think "Concurrent" can be tricky...
 
 ![headache](images/headache.jpg)
