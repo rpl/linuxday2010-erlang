@@ -297,34 +297,71 @@ my_atom
 
 ![spawn Fun](images/spawn_fun.png)
 
+<pre>
+1> Fun = fun() -> io:format("P2~n") end,
+   spawn(Fun).
+P2
+<0.47.0>
+</pre>
+
 #SLIDE
 
 ## Message passing
 
-![send/receive message](images/send_receive_message.png)
-
-#SLIDE
-
-## spawn and receive
+![spawn Fun](images/spawn_fun.png)
 
 <pre>
-Fun = fun () ->
-  receive 
-    message -> io:format("received~n")
-  after 2000 ->
-    io:format("timeout~n")
-  end
-end,
-Pid = spawn(Fun),
-Pid ! message.
-    
+1> Fun = fun() ->
+     receive
+       message -> io:format("message received~n")
+     after 
+       2000 -> io:format("timeout~n")
+     end
+   end.
+2> Pid = spawn(Fun),
+   Pid ! message.
 </pre>
 
 #SLIDE
 
 ## receive loop
 
-TODO
+<pre style="line-height: 1.4em;">
+-module(helloloop).
+
+-compile(export_all).
+
+loop() ->
+    receive
+        message -> io:format("message received~n"), 
+                   loop();
+        stop -> io:format("exiting~n")
+    after 
+        2000 -> io:format("timeout~n"),
+                loop()
+    end.
+
+start() ->
+    spawn(?MODULE, loop, []).
+</pre>
+
+#SLIDE
+
+## Test your first loop
+
+<pre>
+1> c(helloloop).
+{ok, helloloop)
+2> Pid = helloloop:start().
+<0.58.0>
+timeout
+timeout
+3> Pid ! message
+...
+4> Pid ! stop
+exiting
+stop
+</pre>
 
 #SLIDE
 
