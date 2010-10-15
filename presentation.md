@@ -64,6 +64,17 @@ from an erlang point of view
 
 #SLIDE
 
+Learn the syntax is not enough
+
+## we have to learn a new Paradigm:
+
+* "Side Effects"-free code
+* Message Passing
+* Functional Patterns (map, foreach, reduce etc.) 
+* Worker vs. Supervisor Processes
+
+#SLIDE
+
 # From Erlang...
 ## WTF?!??!
 # To Erlang...
@@ -180,17 +191,6 @@ Eshell V5.7.4  (abort with ^G)
 
 #SLIDE
 
-Learn the syntax is not enough
-
-## we have to learn a new Paradigm:
-
-* "Side Effects"-free code
-* Message Passing
-* Functional Patterns (map, foreach, reduce etc.) 
-* Worker vs. Supervisor Processes
-
-#SLIDE
-
 ## MODULE: helloworld.erl
 
 <pre>
@@ -220,15 +220,76 @@ ok
 
 #SLIDE
 
-## single assignment vars
+## Variables and datatypes
 
-![bad match](images/bad_match.png)
+* erlang is a **loosely typed language**
+* a variable can be **bound** or **unbound**
+* single assignment
+* **pattern matching** vs. assignment
+* datatypes: **atom, number, list, tuple, binary**
+
+#SLIDE
+
+## pattern matching vs. assignment
+
+Back to erl:
+<pre>
+3> A = 5.
+5
+4>
+</pre>
+
+but...
+
+#SLIDE
+
+## "=" 
+
+## is not 
+
+## an assignment operator
 
 #SLIDE
 
 ## pattern matching
 
 ![pattern matching](images/pattern_matching.png)
+
+#SLIDE
+
+## single assignment
+
+![bad match](images/bad_match.png)
+
+#SLIDE
+
+## atom is a symbol
+
+<pre>
+1> ok.
+ok
+2> my_atom.
+my_atom
+3> 'My Atom'.
+'My Atom'
+</pre>
+
+# it's not garbage collected so...
+# <a href="http://learnyousomeerlang.com/starting-out-for-real#atoms">don't drink to much Kool-Aid :-P</a>
+#SLIDE
+ 
+## tuple is an immutable list
+
+<pre>
+2> Point = {point, 14, 15}.
+{point, 14, 15}
+3> {point, X, Y} = Point.
+{point, 14, 15}
+4> X.
+14
+5> Y.
+15
+</pre>
 
 #SLIDE
 
