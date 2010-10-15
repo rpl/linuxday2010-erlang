@@ -365,8 +365,18 @@ stop
 
 #SLIDE
 
-## OTP
+## Erlang... punctuation
 
-<pre>
-TODO
-</pre>
+* comma separate (**","**) sequence of expressions
+* semicolon (**";"**) separate clauses 
+* period (**"."**) close functions, module attributes and shell expressions
+
+#SLIDE
+
+Episode 0x03
+
+![OTP Platform](images/otp_platform.png)
+
+## "The Open Telecom Platform"
+
+# ... and much more
