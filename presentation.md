@@ -30,7 +30,7 @@
 
 #SLIDE
 
-## Reason 1.
+## Reason 0.
 
 You can look at this page for a while...
 
@@ -42,7 +42,7 @@ TODO: Immagine/animazione psichedelica
 
 #SLIDE
 
-## Reason 2.
+## Reason 1.
 
 You are already using some erlang software:
 
@@ -54,7 +54,7 @@ You are already using some erlang software:
 
 #SLIDE 
 
-## Reason 3.
+## Reason 2.
 
 You are interested to learn
 
@@ -177,6 +177,18 @@ Eshell V5.7.4  (abort with ^G)
  (*mycode.erl* -> *mycode.beam*)
 * Compiled modules are loaded by
   an **Erlang VM**
+
+#SLIDE
+
+Learn the syntax is not enough
+
+## we have to learn a new Paradigm:
+
+* "Side Effects"-free code
+* Message Passing
+* Functional Patterns (map, foreach, reduce etc.) 
+* Worker vs. Supervisor Processes
+
 #SLIDE
 
 ## MODULE: helloworld.erl
