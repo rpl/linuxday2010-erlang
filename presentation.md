@@ -20,7 +20,7 @@
 ## And now...
 
 * ejabberd, couchdb, rabbitmq...
-* github, basho, processone, facebook, google, amazon...
+* erlang solutions, basho, github, processone, facebook, google, amazon...
 
 #SLIDE
 
@@ -36,7 +36,8 @@ You can look at this page for a while...
 
 ## YOU WANT 
 
-TODO: Immagine/animazione psichedelica
+<iframe src="animation.html" style="width: 500px; height: 400px; border: 0;">
+</iframe>
 
 ## TO LEARN ERLANG
 
@@ -47,9 +48,8 @@ TODO: Immagine/animazione psichedelica
 You are already using some erlang software:
 
 * EJabberd
-* RabbitMQ
 * CouchDB
-* Riak
+* RabbitMQ
 * ...
 
 #SLIDE 
@@ -191,6 +191,14 @@ Eshell V5.7.4  (abort with ^G)
 
 #SLIDE
 
+## Erlang... punctuation
+
+* comma separate (**","**) sequence of expressions
+* semicolon (**";"**) separate clauses 
+* period (**"."**) close functions, module attributes and shell expressions
+
+#SLIDE
+
 ## MODULE: helloworld.erl
 
 <pre>
@@ -224,8 +232,7 @@ ok
 
 * erlang is a **loosely typed language**
 * a variable can be **bound** or **unbound**
-* single assignment
-* **pattern matching** vs. assignment
+* **pattern matching** and single assignment
 * datatypes: **atom, number, list, tuple, binary**
 
 #SLIDE
@@ -365,11 +372,9 @@ stop
 
 #SLIDE
 
-## Erlang... punctuation
+## Links and Traps
 
-* comma separate (**","**) sequence of expressions
-* semicolon (**";"**) separate clauses 
-* period (**"."**) close functions, module attributes and shell expressions
+TODO
 
 #SLIDE
 
@@ -380,3 +385,12 @@ Episode 0x03
 ## "The Open Telecom Platform"
 
 # ... and much more
+
+#SLIDE
+
+## OTP
+
+* OTP behaviours: gen\_server, supervisor, gen\_fsm, gen\_event
+* debugging, testing and monitoring tools
+* mnesia: erlang distribuited database
+* helper modules and a lot more...

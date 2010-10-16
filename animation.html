@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I WANT TO LEARN ERLANG</title>
+  </head>
+  <body style="font-family: helvetica; background: transparent; opacity: 0.6; color: #ddd; text-align: center; overflow: hidden; margin: 0; padding: 0;">
+    <!-- Create a canvas on the page -->
+    <canvas id="screen"></canvas>
+    <!-- Add jQuery for load behaviors -->
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    
+    <!-- Include the gury library -->
+    <script type="text/javascript" charset="utf-8" src="gury.js"></script>
+    
+    <!-- Now script up a neato canvas scene! -->
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        var spin0 = new Image();
+        spin0.src = "images/spin0.jpg";
+        var spin1 = new Image();
+        spin1.src = "images/spin1.png";
+        var spin2 = new Image();
+        spin2.src = "images/spin2.png";
+
+        $g('screen').size(500, 400).add({
+          theta: 80, 
+          draw: function(ctx) {
+              ctx.save();
+              ctx.translate(225, 169);
+              ctx.rotate(this.theta);
+              ctx.scale(2,2);
+              ctx.drawImage(spin0,-225,-169);
+              ctx.restore();
+              this.theta += Math.PI / 20;
+          }
+        }).add({
+          theta: 80, 
+          draw: function(ctx) {
+              ctx.save();
+              ctx.translate(250, 200);
+              ctx.rotate(this.theta);
+              ctx.drawImage(spin1,-154,-134);
+              ctx.restore();
+              this.theta += Math.PI / 80;
+          }
+        }).add({
+          theta: 0, 
+          draw: function(ctx) {
+              ctx.save();
+              ctx.translate(250, 200);
+              ctx.rotate(this.theta);
+              ctx.scale(0.8,0.8);
+              ctx.drawImage(spin2,-107,-90);
+              ctx.restore();
+              this.theta += Math.PI / 60;
+          }
+        }).play(8);
+
+        $('#screen').click(function() { $g('screen').pause() });
+      });      
+    </script>
+  </body>
+</html>
