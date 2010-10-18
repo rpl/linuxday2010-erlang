@@ -122,9 +122,15 @@ Ok... admit it!!!
  
 ## HOW CONCURRENT 
 
-## OUR THREADED OOP APPLICATION
+## OUR APPLICATIONS
 
 ## WILL BE
+
+#SLIDE
+
+## WHY?!?!?
+
+# Object (N) <===> (M) Thread
 
 #SLIDE
 
@@ -133,6 +139,7 @@ Ok... admit it!!!
 * don't share memory
 * message passing
 * lightweight processes
+* object => process
 
 #SLIDE
 
