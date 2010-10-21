@@ -130,7 +130,7 @@ Ok... admit it!!!
 
 ## WHY?!?!?
 
-# Object (N) <===> (M) Thread
+<img src="images/object_thread.png"/>
 
 #SLIDE
 
@@ -452,8 +452,6 @@ ok
 
 ## Links...
 
-TODO: add image
-
 <pre style="line-height: 1.4em;">
 1> self().
 <0.35.0>
@@ -471,6 +469,10 @@ Error in process <0.38.0> with exit value: {undef,[{nonexistent,bug,[]}]}
 5> self().
 <0.42.0>
 </pre>
+
+#SLIDE
+
+<img src="images/linked_processes.png"/>
 
 #SLIDE
 
@@ -494,6 +496,16 @@ Error in process <0.37.0> with exit value: {undef,[{nonexistent,bug,[]}]}
 <0.35.0>
 7> 
 </pre>
+
+#SLIDE
+
+<img src="images/trap_exit.png"/>
+
+#SLIDE
+
+## Erlang Nodes and Distribuited Erlang 
+
+<img src="images/distribuited_erlang.png"/>
 
 #SLIDE
 
@@ -544,7 +556,7 @@ Episode 0x03
 ## OTP
 
 A framework to help **"sequential programmers"** <br/>
-to write **"concurrent code"** :-)
+to write **"concurrent software"** :-)
 
 * OTP behaviours: gen\_server, supervisor, gen\_fsm, gen\_event
 * debugging, testing and monitoring tools
