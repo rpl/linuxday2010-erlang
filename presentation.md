@@ -596,4 +596,8 @@ TODO: add notes on real world erlang
 
 #SLIDE
 
-TODO: add copyright notes
+## Copyright &copy; 2010 - Alca Società Cooperativa
+
+# [http://learn.alcacoop.it](http://learn.alcacoop.it) - [learn@alcacoop.it](mailto:learn@alcacoop.it)
+
+## released under CreativeCommons 2.5 by-nc-sa
