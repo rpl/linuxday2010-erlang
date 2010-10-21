@@ -7042,16 +7042,19 @@
            sodipodi:role="line">Platform</tspan></text>
     </g>
     <path
-       style="opacity:0.42677822;fill:#e3dedb;stroke:#000000;stroke-width:7.51671267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0"
+       style="opacity:0.42677821999999999;fill:none;stroke:none;stroke-width:7.51671267000000043;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0"
        d="m 386.73153,1481.9557 c 0,110.344 -95.6741,199.7955 -213.69409,199.7955 -118.020001,0 -213.694101,-89.4515 -213.694101,-199.7955 0,-110.3438 95.6741,-199.7952 213.694101,-199.7952 118.01999,0 213.69409,89.4514 213.69409,199.7952 z"
        id="path6352-7" />
     <g
        id="g6416"
-       transform="translate(-691.08369,-131.74505)">
+       transform="translate(-691.08369,-131.74505)"
+       inkscape:export-filename="/media/WORKS/PERSONAL/LINUXDAY2010/linuxday2010-erlang/spin2.png"
+       inkscape:export-xdpi="48.150002"
+       inkscape:export-ydpi="48.150002">
       <path
          id="path6352"
          d="m 315.06341,1487.1084 c 0,73.6577 -63.86525,133.3693 -142.64701,133.3693 -78.781763,0 -142.647001,-59.7116 -142.647001,-133.3693 0,-73.6577 63.865238,-133.3692 142.647001,-133.3692 78.78176,0 142.64701,59.7115 142.64701,133.3692 z"
-         style="opacity:0.42677822;fill:#e3dedb;stroke:#000000;stroke-width:5.0176239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0" />
+         style="opacity:0.42677821999999999;fill:none;stroke:none;stroke-width:5.01762390000000025;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0" />
       <text
          transform="matrix(-0.87918993,0.3520522,-0.3764313,-0.82225027,879.97649,2629.753)"
          id="text6375"
@@ -7063,7 +7066,10 @@
    style="font-weight:bold">I WANT TO</tspan></textPath></text>
     </g>
     <g
-       id="g6422">
+       id="g6422"
+       inkscape:export-filename="/media/WORKS/PERSONAL/LINUXDAY2010/linuxday2010-erlang/spin1.png"
+       inkscape:export-xdpi="48.150002"
+       inkscape:export-ydpi="48.150002">
       <text
          id="text6383"
          style="font-size:101.59644318px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
