@@ -201,9 +201,9 @@ Eshell V5.7.4  (abort with ^G)
 
 ## Erlang... punctuation
 
-* comma separate (**","**) sequence of expressions
-* semicolon (**";"**) separate clauses 
-* period (**"."**) close functions, module attributes and shell expressions
+* comma separates (**","**) sequence of expressions
+* semicolon (**";"**) separates clauses 
+* period (**"."**) closes functions, module attributes and shell expressions
 
 #SLIDE
 
