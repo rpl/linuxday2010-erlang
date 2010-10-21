@@ -672,6 +672,15 @@ Have fun!!! :-D
 
 #SLIDE
 
+## Thanks to...
+
+* Erlang VM and OTP developers for these awesome technologies
+* Francesco Cesarini and Joe Armstrong for their books
+* Basho and Dave Smith for rebar, riak and webmachine
+* my coworkers for their patience :-P
+
+#SLIDE
+
 ## Copyright &copy; 2010 - Alca Società Cooperativa
 
 # [http://learn.alcacoop.it](http://learn.alcacoop.it) - [learn@alcacoop.it](mailto:learn@alcacoop.it)
