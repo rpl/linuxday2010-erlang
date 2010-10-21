@@ -93,7 +93,7 @@ Learn the syntax is not enough
 
 #SLIDE
 
-## Think "Concurrent" can be tricky...
+## Design Concurrent Applications can be tricky...
 
 ![headache](images/headache.jpg)
 <div style="font-size: 0.5em;">(image from <a href="http://www.flickr.com/photos/87913776@N00/871983779/in/photostream/">futureatlas.com)</a></div>
@@ -159,9 +159,9 @@ Ok... admit it!!!
 ## FAULT TOLERANT SYSTEMS PRINCIPLES:
 
 * fail fast
-* if it fail, do something simpler
-* separate faults recovery from application code
 * isolate faults in its process
+* separate faults recovery from application code
+* if it fail, do something simpler
 
 #SLIDE
 
@@ -338,7 +338,7 @@ P2
 
 #SLIDE
 
-## receive loop
+## Receive loop
 
 <pre style="line-height: 1.4em;">
 -module(helloloop).
@@ -365,7 +365,7 @@ start() ->
 
 <pre>
 1> c(helloloop).
-{ok, helloloop)
+{ok, helloloop}
 2> Pid = helloloop:start().
 <0.58.0>
 timeout
@@ -379,9 +379,155 @@ stop
 
 #SLIDE
 
-## Links and Traps
+## Receive loop with state 1/2
 
-TODO
+<pre style="line-height: 1.4em;">
+-module(hellostateloop).
+
+-compile(export_all).
+
+loop(State) ->
+    receive
+        {Pid, get, Key} -> 
+	    Reply = case dict:find(Key, State) of
+			error -> {error, unknown_key};
+			{ok, Value} -> {ok, Value}
+		    end,
+	    Pid ! {reply, Reply},
+	    loop(State);
+        {Pid, set, Key, Value} -> 	
+	    NewState = dict:store(Key, Value, State),
+	    Pid ! {reply, ok},
+	    loop(NewState);
+        stop -> io:format("exiting~n")
+    end.
+
+start() ->
+    State = dict:new(),
+    spawn_link(?MODULE, loop, [State]).
+
+</pre>
+
+#SLIDE
+
+## Receive loop with state 2/2
+
+<pre style="line-height: 1.4em;">
+
+get(Pid, Key) ->
+    Pid ! {self(), get, Key},
+    receive
+	{reply, Reply} -> Reply
+    after
+	2000 -> {error, timeout}
+    end.
+
+set(Pid, Key, Value) ->
+    Pid ! {self(), set, Key, Value},
+    receive
+	{reply, Reply} -> Reply
+    after
+	2000 -> {error, timeout}
+    end.
+</pre>
+
+#SLIDE
+
+## Test your first loop with state
+
+<pre>
+1> c(hellostateloop).
+{ok, hellostateloop}
+2> {ok, Pid} = hellostateloop:start().
+{error,unknown_key}
+3> hellostateloop:get(Pid, key1).
+{error,unknown_key}
+4> hellostateloop:set(Pid, key1, 123).
+ok
+5> hellostateloop:get(Pid, key1).
+{ok,123}
+</pre>
+
+#SLIDE
+
+## Links...
+
+TODO: add image
+
+<pre style="line-height: 1.4em;">
+1> self().
+<0.35.0>
+2> Pid = hellofault:start().
+<0.38.0>
+3> link(Pid).
+true
+4> Pid ! stop.
+stop
+5> 
+=ERROR REPORT==== 21-Oct-2010::02:23:36 ===
+Error in process <0.38.0> with exit value: {undef,[{nonexistent,bug,[]}]}
+
+** exception error: undefined function nonexistent:bug/0
+5> self().
+<0.42.0>
+</pre>
+
+#SLIDE
+
+## ... and Traps
+
+<pre style="line-height: 1.4em;">
+1> Pid = hellofault:start().
+<0.37.0>
+2> link(Pid).
+true
+3> process_flag(trap_exit, true).
+false
+4> self().
+<0.35.0>
+5> Pid ! stop.
+stop
+6> 
+=ERROR REPORT==== 21-Oct-2010::02:32:49 ===
+Error in process <0.37.0> with exit value: {undef,[{nonexistent,bug,[]}]}
+6> self().
+<0.35.0>
+7> 
+</pre>
+
+#SLIDE
+
+## Erlang Nodes and Distribuited Erlang 
+
+# node1
+
+<pre>
+$ erl -sname node1 
+Erlang R13B03 (erts-5.7.4) [source] [64-bit] [smp:2:2] [rq:2] [async-threads:0] ...
+Eshell V5.7.4  (abort with ^G)
+(node1@sheldon)1> {ok, Pid} = hellostateloop:start().
+{ok,<0.43.0>}
+(node1@sheldon)2> register(kv_srv, Pid).
+true
+</pre>
+
+#SLIDE
+
+## Erlang Nodes and Distribuited Erlang 
+
+# node 2
+
+<pre>
+$ erl -sname node2
+Erlang R13B03 (erts-5.7.4) [source] [64-bit] [smp:2:2] [rq:2] [async-threads:0] ...
+Eshell V5.7.4  (abort with ^G)
+(node2@sheldon)1> net_adm:ping(node1@sheldon).
+pong
+(node2@sheldon)2> rpc:call(node1@sheldon, hellostateloop, get, [kv_srv, key1]).
+{error,unknown_key}
+(node2@sheldon)3> rpc:call(node1@sheldon, hellostateloop, set, [kv_srv, key1, 123]).
+ok
+</pre>
 
 #SLIDE
 
@@ -397,7 +543,30 @@ Episode 0x03
 
 ## OTP
 
+A framework to help **"sequential programmers"** <br/>
+to write **"concurrent code"** :-)
+
 * OTP behaviours: gen\_server, supervisor, gen\_fsm, gen\_event
 * debugging, testing and monitoring tools
 * mnesia: erlang distribuited database
 * helper modules and a lot more...
+
+#SLIDE
+
+TODO: add example
+
+#SLIDE
+
+TODO: add notes on real world erlang
+
+#SLIDE
+
+TODO: add erlang books
+
+#SLIDE
+
+TODO: add erlang useful docs online
+
+#SLIDE
+
+TODO: add copyright notes
