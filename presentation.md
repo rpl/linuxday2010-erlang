@@ -64,6 +64,12 @@ from an erlang point of view
 
 #SLIDE
 
+## [Apache vs. Yaws](http://www.sics.se/~joe/apachevsyaws.html)
+
+<img src="images/apachevsyaws.jpg" />
+
+#SLIDE
+
 Learn the syntax is not enough
 
 ## we have to learn new Paradigms and Patterns:
