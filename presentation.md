@@ -85,7 +85,7 @@ Learn the syntax is not enough
 
 #SLIDE
 
-#  Episode. 0x01
+#  Episode. 0x00
 
 ## "The Concurrent Dream"
 
