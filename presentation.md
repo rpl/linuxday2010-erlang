@@ -561,11 +561,26 @@ TODO: add notes on real world erlang
 
 #SLIDE
 
-TODO: add erlang books
+## Erlang Books
+
+<img src="images/erlang_books.png"/>
+
+* [Programming Erlang](http://www.amazon.com/Programming-Erlang-Software-Concurrent-World/dp/193435600X)
+* [Erlang Programming](http://www.amazon.com/ERLANG-Programming-Francesco-Cesarini/dp/0596518188)
 
 #SLIDE
 
-TODO: add erlang useful docs online
+## Some online Erlang resources
+
+* [Try Erlang!](http://www.tryerlang.org/)
+* [Learn you some erlang for great good!](http://learnyousomeerlang.com/)
+* [Erlang for python programmers](http://ibiblio.org/obp/py4fun/erlang/erlang.html)
+* [Erlang Concurrency](http://ibiblio.org/obp/py4fun/erlang/erlang2.html)
+* [Erlang Reference Manual](http://www.erlang.org/doc/reference_manual/users_guide.html)
+* [Erlang.org Doc Section](http://erlang.org/doc.html)
+* [Erldocs.com](http://erldocs.com/)
+* [Trap Exit](http://www.trapexit.org/)
+* [Joe Amstrong's Thesis](http://www.sics.se/~joe/thesis/)
 
 #SLIDE
 
