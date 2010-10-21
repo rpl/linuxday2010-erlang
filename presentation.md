@@ -20,7 +20,7 @@
 ## And now...
 
 * ejabberd, couchdb, rabbitmq...
-* erlang solutions, basho, github, processone, facebook, google, amazon...
+* erlang solutions, basho, github, processone, <br/> facebook, google, amazon...
 
 #SLIDE
 
@@ -66,12 +66,13 @@ from an erlang point of view
 
 Learn the syntax is not enough
 
-## we have to learn a new Paradigm:
+## we have to learn new Paradigms and Patterns:
 
 * "Side Effects"-free code
 * Message Passing
 * Functional Patterns (map, foreach, reduce etc.) 
 * Worker vs. Supervisor Processes
+* ...
 
 #SLIDE
 
@@ -161,7 +162,7 @@ Ok... admit it!!!
 * fail fast
 * isolate faults in its process
 * separate faults recovery from application code
-* if it fail, do something simpler
+* if it fails, do something simpler
 
 #SLIDE
 
