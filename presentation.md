@@ -633,7 +633,18 @@ terminate(_Reason, _State) ->
 
 #SLIDE
 
-TODO: add notes on real world erlang
+## Some "tuples" from the real world
+
+### code
+using OTP and learn from other erlang projects
+### build
+using Emakefile or rebar
+### test
+using eunit or common_test
+
+...
+
+Have fun!!! :-D
 
 #SLIDE
 
