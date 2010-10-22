@@ -56,7 +56,9 @@
           }
         }).play(8).pause();
 
-        $('#screen').click(function() { $g('screen').pause() });
+        function pause() { $g('screen').pause() }
+
+        $('#screen').mouseover(pause).mouseout(pause);
       });      
     </script>
   </body>
