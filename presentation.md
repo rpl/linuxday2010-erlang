@@ -184,10 +184,10 @@ Ok... admit it!!!
 Your Erlang best friend: *interactive shell*
 
 <pre>
-$ erl -sname rpl
+$ erl
 Erlang R13B03 (erts-5.7.4) [source] [smp:2:2] [rq:2] [async-threads:0]...
 Eshell V5.7.4  (abort with ^G)
-(rpl@sheldon)1&gt;
+1&gt;
 </pre>
 
 #SLIDE
@@ -229,9 +229,6 @@ run() ->
 
 <pre>
 $ erl
-Erlang R13B03 (erts-5.7.4) [source] [smp:2:2] [rq:2] [async-threads:0] [hipe] ...
-
-Eshell V5.7.4  (abort with ^G)
 1> c(helloworld).
 {ok,helloworld}
 2> helloworld:run().
@@ -394,20 +391,20 @@ stop
 -compile(export_all).
 
 loop(State) ->
-    receive
-        {Pid, get, Key} -> 
+  receive
+    {Pid, get, Key} -> 
 	    Reply = case dict:find(Key, State) of
 			error -> {error, unknown_key};
 			{ok, Value} -> {ok, Value}
 		    end,
 	    Pid ! {reply, Reply},
 	    loop(State);
-        {Pid, set, Key, Value} -> 	
+    {Pid, set, Key, Value} -> 	
 	    NewState = dict:store(Key, Value, State),
 	    Pid ! {reply, ok},
 	    loop(NewState);
-        stop -> io:format("exiting~n")
-    end.
+    stop -> io:format("exiting~n")
+  end.
 
 start() ->
     State = dict:new(),
