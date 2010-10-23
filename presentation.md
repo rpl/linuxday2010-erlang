@@ -652,7 +652,13 @@ Have fun!!! :-D
 
 #SLIDE
 
-## Erlang Books
+## I'm just a padawan in the ancient erlang arts
+
+## so...
+
+#SLIDE
+
+## You could learn more from one of the jedi books on the erlang arts
 
 <img src="images/erlang_books.png"/>
 
@@ -661,7 +667,7 @@ Have fun!!! :-D
 
 #SLIDE
 
-## Some online Erlang resources
+## or from online erlang resources
 
 * [Try Erlang!](http://www.tryerlang.org/)
 * [Learn you some erlang for great good!](http://learnyousomeerlang.com/)
